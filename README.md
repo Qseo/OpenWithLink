@@ -21,8 +21,10 @@ You must set the correct id of OpenWith option for select specific action. List 
 Also you can create your custom manual actions, here is example for Linux Dolphin file browser:
 
 ```
-extensions.openwith.manual.dolphin = "/usr/bin/dolphin"
-extensions.openwith.manual.dolphin.name = "Dolphin"
+extensions.openwith.manual.filebrowser = "/usr/bin/dolphin"
+extensions.openwith.manual.filebrowser.name = "Local file browser (Dolphin)"
+extensions.openwith.manual.ftpclient = "/usr/bin/dolphin"
+extensions.openwith.manual.ftpclient.name = "FTP client (Dolphin)"
 ```
 
 Examples of working HTML code:
@@ -34,11 +36,11 @@ Examples of working HTML code:
 - <a href="http://google.com" openwith="auto:chromium">Open Google in Chromium browser</a>
 `<a href="http://google.com" openwith="auto:chromium">Open Google in Chromium browser</a>`
 
-- <a href="ftp://user:pass@example.com/myfolder/" openwith="manual:dolphin">Open ftp with Linux KDE Dolphin file browser</a>
-`<a href="ftp://user:pass@example.com/myfolder/" openwith="manual:dolphin">Open ftp with Linux KDE Dolphin file browser</a>`
+- <a href="ftp://user:pass@example.com/myfolder/" openwith="manual.ftpclient">Open ftp with external FTP client</a>
+`<a href="ftp://user:pass@example.com/myfolder/" openwith="manual.ftpclient">Open ftp with external FTP client</a>`
 
-- <a href="file:///home/" openwith="manual:dolphin">Open /home folder with Linux KDE Dolphin file browser</a>
-`<a href="file:///home/" openwith="manual:dolphin">Open /home folder with Linux KDE Dolphin file browser</a>`
+- <a href="file:///home/" openwith="manual.filebrowser">Open /home folder with external file browser</a>
+`<a href="file:///home/" openwith="manual.filebrowser">Open /home folder with external file browser</a>`
 
 
 Changelog
